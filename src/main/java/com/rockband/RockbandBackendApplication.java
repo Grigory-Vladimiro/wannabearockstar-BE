@@ -17,9 +17,9 @@ public class RockbandBackendApplication {
 @Bean
     CommandLineRunner initDatabase(AlbumRepository albumRepository) {
         return args -> {
-            albumRepository.save(new Album("Highway to Hell", 1979, "img/albums/highway-to-hell.jpg", "Legendary AC/DC album"));
-			albumRepository.save(new Album("Back in Black", 1980, "img/albums/back-in-black.jpg", "One of the best-selling albums ever"));
-			albumRepository.save(new Album("The Black Album", 1991, "img/albums/the-black-album.jpg", "Metallica's iconic album"));
+            albumRepository.save(new Album("Highway to Hell", 1979, "img/albums/album1.jpg", "Legendary AC/DC album"));
+			albumRepository.save(new Album("Back in Black", 1980, "img/albums/album2.jpg", "One of the best-selling albums ever"));
+			albumRepository.save(new Album("The Black Album", 1991, "img/albums/album3.jpg", "Metallica's iconic album"));
         };
     }
 }
