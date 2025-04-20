@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rockband.model.News;
 import com.rockband.service.NewsService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/news")
 @CrossOrigin(origins = "*")
