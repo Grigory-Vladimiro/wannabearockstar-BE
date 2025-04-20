@@ -1,6 +1,8 @@
 package com.rockband.model;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -13,6 +15,9 @@ public class Album {
     private String coverUrl;
     private String description;
 
+    @ElementCollection
+    private List<String> songs = new ArrayList<>();
+
     // Constructors
     public Album() {}
 
@@ -24,7 +29,6 @@ public class Album {
     }
 
     // Getters & Setters
-
     public Long getId() {
         return id;
     }
@@ -63,5 +67,13 @@ public class Album {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<String> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<String> songs) {
+        this.songs = songs;
     }
 }
