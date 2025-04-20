@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rockband.model.News;
 import com.rockband.service.NewsService;
 
+import jakarta.annotation.PostConstruct;
+
 import java.util.List;
 
 @RestController
@@ -24,6 +26,10 @@ private final NewsService newsService;
 
     public NewsController(NewsService newsService) {
         this.newsService = newsService;
+    }
+    @PostConstruct
+    public void init() {
+        System.out.println("NewsController initialized");
     }
 
     // GET all news
