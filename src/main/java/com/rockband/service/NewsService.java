@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import com.rockband.model.News;
 import com.rockband.repository.NewsRepository;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class NewsService {
 private final NewsRepository newsRepository;
