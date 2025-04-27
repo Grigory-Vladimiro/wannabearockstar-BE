@@ -1,0 +1,13 @@
+@startuml sequence-diagram
+actor User
+participant "React App" as Frontend
+participant "Spring Boot App" as Backend
+participant "H2 Database" as Database
+
+User -> Frontend : Visit Home Page
+Frontend -> Backend : GET /api/albums
+Backend -> Database : SELECT * FROM Album
+Database --> Backend : List<Album>
+Backend --> Frontend : JSON Response
+Frontend -> User : Display Albums
+@enduml

@@ -1,0 +1,25 @@
+@startuml component-diagram
+package "Frontend (React.js)" {
+  [React App] --> (API Calls)
+}
+
+package "Backend (Spring Boot)" {
+  (API Calls) --> [AlbumController]
+  (API Calls) --> [ConcertController]
+  (API Calls) --> [NewsController]
+
+  [AlbumController] --> [AlbumService]
+  [ConcertController] --> [ConcertService]
+  [NewsController] --> [NewsService]
+
+  [AlbumService] --> [AlbumRepository]
+  [ConcertService] --> [ConcertRepository]
+  [NewsService] --> [NewsRepository]
+}
+
+package "Database (H2)" {
+  [AlbumRepository] --> (Album Table)
+  [ConcertRepository] --> (Concert Table)
+  [NewsRepository] --> (News Table)
+}
+@enduml

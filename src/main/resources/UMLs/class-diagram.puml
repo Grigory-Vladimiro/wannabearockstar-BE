@@ -1,0 +1,24 @@
+@startuml class-diagram
+class Album {
+  - Long id
+  - String title
+  - int releaseYear
+  - String coverUrl
+  - String description
+  - List<String> songs
+}
+
+class Concert {
+  - Long id
+  - String city
+  - String venue
+  - String date
+}
+
+class News {
+  - Long id
+  - String text
+  - LocalDate date
+}
+
+@enduml
